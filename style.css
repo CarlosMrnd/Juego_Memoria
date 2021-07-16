@@ -1,0 +1,263 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Dosis;
+    text-align: center;
+}
+
+/*Global styles*/
+:root{
+    --first-color:#22D1EE;
+    --second-color:#FAF2F9;
+    --third-color:#171C4A;
+}
+
+.flex-style{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid-style{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.text-style{
+    font-weight: bold;
+}
+
+.header-margin{
+    margin: 0;
+}
+
+#welcome-sct, #customize-sct{
+    padding: 15px;
+    height: 95vh;
+    background-color: var(--third-color);
+}
+
+/*Welcome section*/
+#img-fondo-welcome{
+    width: 90%;
+    height:60%;
+    margin: 0px auto;
+    border-radius: 60px;
+    background-image: url(svg/Animals/Brontosaurus.svg), linear-gradient(0deg, 
+    rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+    background-repeat: none;
+    background-size: cover;
+    background-position-x: 180px;
+}
+
+#col-action{
+    height: 40%;
+    margin-top: 10px;
+}
+
+.col-text{
+    width: 50%;
+    color: var(--second-color);
+    font-size: 55px;
+}
+
+#custom-btn{
+    width: 11%;
+    height: 20%;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color: var(--first-color);
+    font-size: 35px;
+    border: none;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+a:hover, #start-btn:hover{
+    color: var(--second-color);
+}
+
+/*Customize section*/
+#customize-sct h2{
+    margin: 0 auto;
+}
+
+#col2{
+    height: 85%;
+}
+
+.container{
+    background: rgba(250,242,249, 0.2);
+    height: 90%;
+    width: 40%;
+    border-radius: 20px;
+}
+
+h3{
+    font-size: 53px;
+    color: var(--first-color);
+}
+
+.col3{
+    grid-template-columns: repeat(3,auto);
+    margin-top: 10px;
+}
+
+#customize-sct p{
+    font-size: 40px;
+    color: var(--second-color);
+}
+
+.right{
+    text-align: right;
+    justify-self: flex-end;
+}
+
+.left{
+    text-align: left;
+    justify-self: flex-start;
+}
+
+input[type="radio"]{
+    margin: 0;
+    appearance: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 5px solid var(--third-color);
+}
+
+input[type="radio"]:checked {    
+    background: var(--second-color);
+}
+
+#customize-sct img{
+    width: 170px;
+    height: 115px;
+}
+
+#start-btn{
+    position: absolute;
+    left: 44.5%;
+    bottom: -98%;
+    width: 11%;
+    height: 7%;
+    border: none;
+    border-radius: 20px;
+    color: var(--third-color);
+    background-color: var(--first-color);
+    font-size: 32px;
+}
+
+/*Board game*/
+#board-game{
+    padding: 0;
+    height: 100vh;
+    background-color: var(--third-color);
+}
+
+#img-fondo-board{
+    height: 99.5%;
+    border-radius: 60px;
+    position: absolute;
+}
+
+#background-img-board{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+/*VOY POR ACA*/
+#info-game{
+    margin:0px auto;
+    padding:10px;
+    width: 65%;
+}
+
+.game-text{
+    font-size: 42px;
+    color: var(--first-color);
+    z-index: 0;
+}
+
+.game-text span{
+    color: var(--second-color);
+    z-index: 0;
+    font-size: 42px;
+}
+
+#layout{
+    margin: 10px auto;
+}
+
+.flip-card-easy {
+    background-color: transparent;
+    width:110px;
+    height:140px;
+    perspective: 600px; 
+    z-index:0;
+}
+
+.flip-card-medium {
+    background-color: transparent;
+    width:100px;
+    height:120px;
+    perspective: 600px; 
+    z-index:0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: var(--first-color);
+    border: 4px solid var(--second-color);
+    border-radius: 20px;
+}
+
+.flip-card-back {
+    background-color: var(--second-color);
+    border: 4px solid var(--first-color);
+    border-radius:20px;
+    transform: rotateY(180deg);
+}
+
+.img-resp{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.win{
+    position:absolute;
+    height:80%;
+    width:80%;
+    background-color: rgba(255,255,255,0.2);
+    border: 2px dashed #fff;
+    top:13%;
+    left:10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    font-size: 42px;
+    color: var(--first-color);
+    z-index: 0;
+    border-radius: 30px;
+}

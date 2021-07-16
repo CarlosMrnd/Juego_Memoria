@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+        <link rel="shortcut icon" type="image/svg" href="svg/Animals/Brontosaurus.svg"/>
+    </head>
+    <body>
+        <main>
+            <section id="welcome-sct" hidden>
+                <div id="img-fondo-welcome"></div>
+                <div id="col-action" class="flex-style">
+                    <h2 class="col-text header-margin text-style">Try to find all the matches before time end!</h2>
+                    <button id="custom-btn" class="text-style"><a href="#customize-sct">Play</a></button>
+                </div>
+            </section>
+            
+            <section id="customize-sct" hidden>
+                <h2 class="col-text header-margin text-style">Customizing the game</h2>
+                <div id="col2" class="flex-style">
+                    <div class="container">
+                        <h3 class="header-margin text-style">Choose the topic</h3>
+                        <div class="col3 grid-style">
+                            <img src="svg/cat-custom.svg"/>
+                            <p class="right header-margin text-style">Animals</p>
+                            <input id="topic1" type="radio" name="topic" value="animals">
+                        </div>
+                        <div class="col3 grid-style">
+                            <img src="svg/food-custom.svg"/>
+                            <p class="right header-margin text-style">Food</p>
+                            <input id="topic2" type="radio" name="topic" value="food">
+                        </div>
+                        <div class="col3 grid-style">
+                            <img src="svg/arcade-custom.svg"/>
+                            <p class="right header-margin text-style">Games</p>
+                            <input id="topic3" type="radio" name="topic" value="games">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h3 class="header-margin text-style">Choose the level</h3>
+                        <div class="col3 grid-style">
+                            <input id="level1" type="radio" name="level" value="easy">
+                            <p class="left header-margin text-style">Easy</p>
+                            <img src="svg/pingui-custom.svg"/>
+                        </div>
+                        <div class="col3 grid-style">
+                            <input id="level2" type="radio" name="level" value="medium">
+                            <p class="left header-margin  text-style">Medium</p>
+                            <img src="svg/dogplay-custom.svg"/>
+                        </div>
+                        <div class="col3 grid-style">
+                            <input id="level3" type="radio" name="level" value="hard">
+                            <p class="left header-margin  text-style">Hard</p>
+                            <img src="svg/dogdap-custom.svg"/>
+                        </div>
+                    </div>
+                </div>
+                <button id="start-btn" class="text-style">Start</button>
+            </section>
+
+            <section id="board-game">
+                <div id="img-fondo-board">
+                    <img id="background-img-board"/>
+                </div>
+                <div id="info-game" class="flex-style">
+                    <h2 class="game-text header-margin">Level: <span id="level-text">______</span></h2>
+                    <h2 class="game-text header-margin">Attempts: <span id="intentos-text">0</span></h2>
+                    <h2 class="game-text header-margin">Time: <span id="time-text"></span></h2>
+                </div>
+                <div id="layout" class="grid-style">
+                <!--<div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                
+                            </div>
+                            <div class="flip-card-back">
+                                
+                            </div>
+                        </div>
+                    </div> -->    
+                </div>
+
+                <div id="won-game" class="win">
+                    <h2>Congratulations !!!
+                    <br>¡ You'r fantastic !
+                    </h2>
+                </diV>
+
+            </section>
+        
+        </main>
+
+        <script src="core.js"></script>
+
+    </body>
+</html>

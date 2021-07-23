@@ -8,12 +8,22 @@ const getElement = (element) => document.querySelector(element);
 const welcomePage = getElement("#welcome-sct");
 const customaPage = getElement("#customize-sct");
 const gamePage = getElement("#board-game");
-
 const startBtn = getElement("#start-btn");
 const boardLevelText = getElement("#level-text");
 const boardTryText = getElement("#intentos-text");
 const boardTimeText = getElement("#time-text");
 const layout = getElement("#layout");
+const winDiv = getElement("#win-game");
+const winConfetti = getElement("#win-confetti");
+
+const animationConfetti = bodymovin.loadAnimation({
+    wrapper: winConfetti,
+    animType: "svg",
+    loop: false,
+    autoplay: false,
+    path: "https://assets10.lottiefiles.com/packages/lf20_u4yrau.json"
+});
+
 let boardImgBack = getElement("#background-img-board");
 
 let levelInput = "";
@@ -59,9 +69,9 @@ startBtn.addEventListener("click", ()=>{
     
     if(levelInput !== "" || topicInput !== ""){
         
-        welcomePage.style.display = "none";
-        customaPage.style.display = "none";
-        gamePage.style.display = "block";    
+        welcomePage.classList.add("hide");
+        customaPage.classList.add("hide");
+        gamePage.classList.remove("hide");    
 
         switch(levelInput){
             case "easy":
@@ -268,6 +278,14 @@ function timeGame(tt){
         }
         else if(totalMatch == cardsEasy.length/2){
             clearInterval(intervalTime);
+            layout.style.opacity = "0.7";
+            winDiv.classList.remove("hide");
+            winDiv.classList.add("win");
+            winConfetti.classList.remove("hide");
+            animationConfetti.goToAndPlay(0,true);
+            setInterval(()=>{
+                animationConfetti.goToAndPlay(0,true);
+            }, 5000);
         }
 
     },1000);

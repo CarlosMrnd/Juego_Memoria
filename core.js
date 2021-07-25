@@ -96,7 +96,11 @@ function bgBoardGame() {
     
     if(topicInput === "animals"){
         boardImgBack.setAttribute("src", "svg/Fondo-animal.svg");
-        
+        /* gamePage.style.backgroundImage = "url(svg/Fondo-animal.svg)";
+        gamePage.style.backgroundSize = "contain";
+        gamePage.style.backgroundRepeat = "no-repeat";
+        gamePage.style.blendMode = "multiply"; */
+
         if(levelInput==="easy"){
             createSixImgs(imgAnimalsSrc,imgListAnimals,12);
             boardLayoutEasy(imgListAnimals);
@@ -294,8 +298,18 @@ function timeGame(tt){
 
 function boardLayoutEasy(arr){
             
-    layout.style.height = "510px";
-    layout.style.width = "600px";
+    if(window.matchMedia("(max-width:400px)").matches){
+      gamePage.classList.add("flex-style");
+      gamePage.style.flexDirection = "column";
+      gamePage.style.justifyContent = "center";
+      layout.style.height = "400px";
+      layout.style.width = "340px";
+    }
+    else{
+      layout.style.height = "510px";
+      layout.style.width = "600px";
+    }
+    
     layout.style.gridTemplateColumns = "repeat(4,auto)";
 
     createFlipCard(12,"flip-card-easy ");
@@ -324,9 +338,18 @@ function boardLayoutEasy(arr){
 
 function boardLayoutMedium(arr){
             
-    layout.style.margin = "5px Auto"; 
-    layout.style.height = "530px";
-    layout.style.width = "610px";
+    if(window.matchMedia("(max-width:400px)").matches){
+      gamePage.classList.toggle("flex-style");
+      gamePage.style.flexDirection = "column";
+      gamePage.style.justifyContent = "center";
+      layout.style.height = "420px";
+      layout.style.width = "360px";
+    }  
+    else{
+      layout.style.height = "530px";
+      layout.style.width = "610px";
+    } 
+    
     layout.style.gridTemplateColumns = "repeat(5,auto)";
 
     createFlipCard(20,"flip-card-medium ");
@@ -355,9 +378,18 @@ function boardLayoutMedium(arr){
 
 function boardLayoutHard(arr){
             
-    layout.style.margin = "5px Auto"; 
-    layout.style.height = "530px";
-    layout.style.width = "720px";
+    if(window.matchMedia("(max-width:400px)").matches){
+      gamePage.classList.toggle("flex-style");
+      gamePage.style.flexDirection = "column";
+      gamePage.style.justifyContent = "center";
+      layout.style.height = "400px";
+      layout.style.width = "390px";
+    }
+    else{
+      layout.style.height = "530px";
+      layout.style.width = "720px";
+    }
+    
     layout.style.gridTemplateColumns = "repeat(6,auto)";
 
     createFlipCard(24,"flip-card-medium ");

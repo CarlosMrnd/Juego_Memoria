@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -34,7 +38,7 @@ body{
 
 #welcome-sct, #customize-sct{
     padding: 15px;
-    height: 95vh;
+    height: 100vh;
     background-color: var(--third-color);
 }
 
@@ -45,19 +49,17 @@ body{
 /*Welcome section*/
 #img-fondo-welcome{
     width: 90%;
-    height:60%;
+    height:70%;
     margin: 0px auto;
     border-radius: 60px;
-    background-image: url(svg/Animals/Brontosaurus.svg), linear-gradient(0deg, 
+    background-image: url(svg/Portada-img.svg), linear-gradient(0deg, 
     rgba(255,255,255,0.5), rgba(255,255,255,0.1));
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 180px;
 }
 
 #col-action{
-    height: 40%;
-    margin-top: 10px;
+    height: 30%;
 }
 
 .col-text{
@@ -145,9 +147,6 @@ input[type="radio"]:checked {
 }
 
 #start-btn{
-    position: absolute;
-    left: 44.5%;
-    bottom: -98%;
     width: 11%;
     height: 7%;
     border: none;
@@ -166,6 +165,7 @@ input[type="radio"]:checked {
 
 #img-fondo-board{
     height: 99.5%;
+    width: 92%;
     border-radius: 60px;
     position: absolute;
     left:4.6%;
@@ -202,16 +202,16 @@ input[type="radio"]:checked {
 
 .flip-card-easy {
     background-color: transparent;
-    width:110px;
-    height:140px;
+    width:90%;
+    height:90%;
     perspective: 600px; 
     z-index:0;
 }
 
 .flip-card-medium {
     background-color: transparent;
-    width:100px;
-    height:120px;
+    width:90%;
+    height:90%;
     perspective: 600px; 
     z-index:0;
 }
@@ -273,4 +273,64 @@ input[type="radio"]:checked {
     top: 12%;
     left: 5%;
     z-index: 0;
+}
+
+@media (max-width:400px){
+  #img-fondo-welcome{
+    height: 80%;
+  }
+  #col-action{
+    height: 20%;
+  }
+  .col-text{
+    font-size: 1.2rem;
+    width: 65%;
+  }
+  #custom-btn{
+    font-size: 1.2rem;
+    width: 30%;
+    height: 25%;
+  }
+  #customize-sct{
+    flex-direction:column;
+  }
+  #col2{
+    height: 80%;
+    width: 90%;
+    flex-direction:column;
+  }
+  .container{
+    width: 95%;
+    height:40%;
+  }
+  .col3{
+    height:23%;
+  }
+  h3, #customize-sct p{
+    font-size: 1rem;
+  }
+  input[type="radio"]{
+    height: 25px;
+    width: 25px;
+    border-width:3px;
+  }
+  #customize-sct img{
+    height: 90%;
+    width: 90%;
+  }
+  #start-btn{
+    font-size: 1.2rem;
+    width: 30%;
+    height: 4.5%;
+  }
+  #info-game{
+    width:90%;
+    margin:0;
+  }
+  .game-text, .game-text span{
+    font-size:1.1rem;
+  }
+  #layout{
+    margin: 0;
+  }
 }

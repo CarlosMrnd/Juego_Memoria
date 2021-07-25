@@ -52,8 +52,7 @@ body{
     height:70%;
     margin: 0px auto;
     border-radius: 60px;
-    background-image: url(svg/Portada-img.svg), linear-gradient(0deg, 
-    rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+    background-image: url(svg/Portada-img.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -88,12 +87,17 @@ a:hover, #start-btn:hover{
 }
 
 /*Customize section*/
+#customize-sct{
+    flex-direction:column;
+}
+
 #customize-sct h2{
     margin: 0 auto;
 }
 
 #col2{
     height: 85%;
+    width:90%;
 }
 
 .container{
@@ -109,7 +113,7 @@ h3{
 }
 
 .col3{
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,1fr);
     margin-top: 10px;
 }
 
@@ -275,10 +279,11 @@ input[type="radio"]:checked {
     z-index: 0;
 }
 
-@media all and (orientation:portrait){
+@media (max-width:420px){
   #img-fondo-welcome{
     height: 80%;
-  }
+    background-position-x: 60%;
+}
   #col-action{
     height: 20%;
   }
@@ -291,9 +296,6 @@ input[type="radio"]:checked {
     width: 30%;
     height: 25%;
   }
-  #customize-sct{
-    flex-direction:column;
-  }
   #col2{
     height: 80%;
     width: 90%;
@@ -305,6 +307,7 @@ input[type="radio"]:checked {
   }
   .col3{
     height:23%;
+    margin:0;
   }
   h3, #customize-sct p{
     font-size: 1rem;
@@ -315,8 +318,8 @@ input[type="radio"]:checked {
     border-width:3px;
   }
   #customize-sct img{
-    height: 90%;
-    width: 90%;
+    max-height: 50%;
+    max-width: 50%;
   }
   #start-btn{
     font-size: 1.2rem;

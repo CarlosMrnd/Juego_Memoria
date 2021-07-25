@@ -298,7 +298,7 @@ function timeGame(tt){
 
 function boardLayoutEasy(arr){
             
-    if(window.matchMedia("(max-width:400px)").matches){
+    if(window.matchMedia("(max-width:450px)").matches){
       gamePage.classList.add("flex-style");
       gamePage.style.flexDirection = "column";
       gamePage.style.justifyContent = "center";
@@ -338,7 +338,7 @@ function boardLayoutEasy(arr){
 
 function boardLayoutMedium(arr){
             
-    if(window.matchMedia("(max-width:400px)").matches){
+    if(window.matchMedia("(max-width:450px)").matches){
       gamePage.classList.toggle("flex-style");
       gamePage.style.flexDirection = "column";
       gamePage.style.justifyContent = "center";
@@ -378,7 +378,7 @@ function boardLayoutMedium(arr){
 
 function boardLayoutHard(arr){
             
-    if(window.matchMedia("(max-width:400px)").matches){
+    if(window.matchMedia("(max-width:450px)").matches){
       gamePage.classList.toggle("flex-style");
       gamePage.style.flexDirection = "column";
       gamePage.style.justifyContent = "center";

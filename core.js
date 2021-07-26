@@ -299,9 +299,6 @@ function timeGame(tt){
 function boardLayoutEasy(arr){
             
     if(window.matchMedia("(max-width:420px)").matches){
-      gamePage.classList.add("flex-style");
-      gamePage.style.flexDirection = "column";
-      gamePage.style.justifyContent = "center";
       layout.style.height = "400px";
       layout.style.width = "340px";
     }
@@ -339,9 +336,6 @@ function boardLayoutEasy(arr){
 function boardLayoutMedium(arr){
             
     if(window.matchMedia("(max-width:420px)").matches){
-      gamePage.classList.toggle("flex-style");
-      gamePage.style.flexDirection = "column";
-      gamePage.style.justifyContent = "center";
       layout.style.height = "420px";
       layout.style.width = "360px";
     }  
@@ -379,9 +373,6 @@ function boardLayoutMedium(arr){
 function boardLayoutHard(arr){
             
     if(window.matchMedia("(max-width:420px)").matches){
-      gamePage.classList.toggle("flex-style");
-      gamePage.style.flexDirection = "column";
-      gamePage.style.justifyContent = "center";
       layout.style.height = "400px";
       layout.style.width = "390px";
     }

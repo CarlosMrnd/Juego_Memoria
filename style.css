@@ -105,6 +105,7 @@ a:hover, #start-btn:hover{
     height: 90%;
     width: 40%;
     border-radius: 20px;
+    flex-direction: column;
 }
 
 h3{
@@ -113,8 +114,8 @@ h3{
 }
 
 .col3{
-    grid-template-columns: repeat(3,1fr);
-    margin-top: 10px;
+    grid-template-columns: repeat(3,auto);
+    width:90%;
 }
 
 #customize-sct p{
@@ -158,6 +159,7 @@ input[type="radio"]:checked {
     color: var(--third-color);
     background-color: var(--first-color);
     font-size: 32px;
+    cursor: pointer;
 }
 
 /*Board game*/
@@ -165,6 +167,8 @@ input[type="radio"]:checked {
     padding: 0;
     height: 100vh;
     background-color: var(--third-color);
+    flex-direction:column;
+    justify-content: center;
 }
 
 #img-fondo-board{
@@ -289,7 +293,7 @@ input[type="radio"]:checked {
   }
   .col-text{
     font-size: 1.2rem;
-    width: 65%;
+    width: 60%;
   }
   #custom-btn{
     font-size: 1.2rem;
@@ -298,7 +302,6 @@ input[type="radio"]:checked {
   }
   #col2{
     height: 80%;
-    width: 90%;
     flex-direction:column;
   }
   .container{
@@ -306,20 +309,21 @@ input[type="radio"]:checked {
     height:40%;
   }
   .col3{
+    display:flex;
     height:23%;
-    margin:0;
+    justify-content:space-between;
   }
   h3, #customize-sct p{
     font-size: 1rem;
   }
   input[type="radio"]{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     border-width:3px;
   }
   #customize-sct img{
-    max-height: 50%;
-    max-width: 50%;
+    max-height: 95%;
+    max-width: 30%;
   }
   #start-btn{
     font-size: 1.2rem;
@@ -335,5 +339,12 @@ input[type="radio"]:checked {
   }
   #layout{
     margin: 0;
+  }
+  .win{
+      height:50%;
+      width:75%;
+      top:28%;
+      left:13%;
+      font-size: 1.2rem;
   }
 }
